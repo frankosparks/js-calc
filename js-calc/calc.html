@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <h1>Calculator of the Year!!</h1>
+
+      <p class="js-disp">
+        <script>
+          document.querySelector(".js-disp").innerHTML = JSON.parse(
+            localStorage.getItem("calculation")
+          );
+        </script>
+      </p>
+
+      <div class="row1">
+        <button
+          onclick="
+        bSymbols('1');
+        "
+          class="no"
+        >
+          1
+        </button>
+
+        <button
+          onclick="
+        bSymbols('2');
+      "
+          class="no"
+        >
+          2
+        </button>
+
+        <button
+          onclick="
+       bSymbols('3');
+    "
+          class="no"
+        >
+          3
+        </button>
+
+        <button
+          onclick="
+      bSymbols('/');
+      "
+          class="yellow"
+        >
+          /
+        </button>
+      </div>
+
+      <div class="row2">
+        <button
+          onclick="
+      bSymbols('4');
+      "
+          class="no"
+        >
+          4
+        </button>
+
+        <button
+          onclick="
+      bSymbols('5');
+    "
+          class="no"
+        >
+          5
+        </button>
+
+        <button
+          onclick="
+    bSymbols('6');
+  "
+          class="no"
+        >
+          6
+        </button>
+
+        <button
+          onclick="
+    bSymbols('x');
+    "
+          class="yellow"
+        >
+          x
+        </button>
+      </div>
+
+      <div class="row3">
+        <button
+          onclick="
+      bSymbols('7');
+    "
+          class="no"
+        >
+          7
+        </button>
+
+        <button
+          onclick="
+      bSymbols('8');
+    "
+          class="no"
+        >
+          8
+        </button>
+
+        <button
+          onclick="
+      bSymbols('9');
+   "
+          class="no"
+        >
+          9
+        </button>
+
+        <button
+          onclick="
+      bSymbols(' - ');
+    "
+          class="yellow"
+        >
+          -
+        </button>
+      </div>
+
+      <div class="row4">
+        <button
+          onclick="
+      bSymbols('0');
+    "
+          class="no"
+        >
+          0
+        </button>
+        <button
+          onclick="
+      bSymbols(' . ');
+     "
+          class="no"
+        >
+          .
+        </button>
+
+        <button
+          onclick="
+    bSymbols('%');
+    "
+          class="no"
+        >
+          %
+        </button>
+
+        <button
+          onclick="
+    bSymbols(' + ');
+    "
+          class="yellow"
+        >
+          +
+        </button>
+      </div>
+
+      <div class="row5">
+        <button
+          onclick="
+      bSymbols('=');
+    "
+          id="b5"
+        >
+          =
+        </button>
+
+        <button
+          onclick="
+      calculation = '';
+      localStorage.removeItem('calculation');
+      document.querySelector('.js-disp').innerHTML = 0;
+    "
+          id="b6"
+        >
+          Del
+        </button>
+      </div>
+
+      <script src="calc.js"></script>
+    </div>
+  </body>
+</html>
